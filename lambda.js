@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1';
-//exports.handler = function(event, context) {
+exports.handler = function(event, context) {
     console.log("\n\nLoading handler\n\n");
     var ec2 = new AWS.EC2();
     ec2.describeRegions(function(err, data) {
@@ -96,4 +96,4 @@ AWS.config.region = 'us-east-1';
         console.log(JSON.stringify(without_project)+'\n\n')
     });
   };
-//}
+}
